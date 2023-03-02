@@ -16,7 +16,8 @@ public class HomeController {
     IUserService iUserService;
     @GetMapping
     public String viewHomePage(Model model, HttpSession session){
-        if (session.getAttribute("user") == null) return "redirect:/login";
+        if (session.getAttribute("user") == null)
+            return "redirect:/login";
         return "home";
     }
 }
